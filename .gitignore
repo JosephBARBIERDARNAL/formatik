@@ -1,0 +1,12 @@
+*cache*
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+
+.venv
+
+.DS_Store
+sandbox*
