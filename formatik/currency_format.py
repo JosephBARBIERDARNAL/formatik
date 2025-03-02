@@ -117,9 +117,3 @@ def currency_format(
         formatted_number = f"{prefix}{result}{suffix}"
 
     return formatted_number
-
-
-if __name__ == "__main__":
-    import doctest
-
-    doctest.testmod()

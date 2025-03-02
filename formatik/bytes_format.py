@@ -9,21 +9,41 @@ def bytes_format(
     """
     Format bytes into human-readable units (kB, MB, GB, etc.).
 
-    Parameters:
-        x: Number of bytes or iterable of byte counts
-        precision: Number of decimal places to round to
+    Parameters
+    ----------
 
-    Returns:
-        Formatted string(s) with appropriate unit
+    `x`: Number of bytes or an iterable of byte counts.
+
+    `precision`: Number of decimal places to round to.
+
+    Returns
+    -------
+
+    Formatted string(s) with the appropriate unit. If `x` is an iterable, returns a list of formatted strings of the same length.
 
     Examples:
-        >>> bytes_format(1024)
-        '1.0 kB'
-        >>> bytes_format(1500000)
-        '1.4 MB'
-        >>> bytes_format([1024, 1500000])
-        ['1.0 kB', '1.4 MB']
+    ----------
+
+    ```python
+    from formatik import bytes_format
+    ```
+
+    ```python
+    bytes_format(1024)
+    >>> '1.0 kB'
+    ```
+
+    ```python
+    bytes_format(1500000)
+    >>> '1.4 MB'
+    ```
+
+    ```python
+    bytes_format([1024, 1500000])
+    >>> ['1.0 kB', '1.4 MB']
+    ```
     """
+
     units = ["B", "kB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB"]
 
     def _format_single(value: int) -> str:
